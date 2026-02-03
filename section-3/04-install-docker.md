@@ -2,6 +2,8 @@
 
 In this lecture, we will learn how to Install Docker on ubuntu EC2.
 
+Documentation for Ubuntu installation: https://docs.docker.com/engine/install/ubuntu/
+
 ### Add Docker's official GPG key:
 ```
 sudo apt-get update
