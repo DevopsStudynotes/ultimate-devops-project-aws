@@ -10,32 +10,4 @@
         ```
     6. Install kubectl in your local computer (using chocolatey in windows) or ubuntu. kubectl is the client that will interact with your k8s cloud. Alternatively, you can install it in the ec2 machine that was created.
     7. Install terraform in your local machine or ec2.
-    8. If you only used 8G to create a volume during ec2 creation, this might have to be expanded for the installation of the pre-requisites for this project. Use the following commands:
-        
-        To check partition info and to note down name of the partition assigned to root folder:
-        
-        ```bash
-        df -h
-        lsblk
-        ```
-        
-        To increase the size of the partition (assuming xvda1 is the root partition):
-        ```bash
-        sudo apt install cloud-guest-utils
-        sudo growpart /dev/xvda1
-        ```
-
-        To verify partition size has been changed:
-        ```bash
-        lsblk
-        ```
-
-        To update the filesystem so that it reflects the size change for root directory:
-        ```bash
-        sudo resize2fs /dev/xvda1
-        ```
-    9. To run containers in the background:
-        ```bash
-        docker compose up -d
-        ```
-    10. To access the project on the browser, AWS security group rules need to be modified. Note: SG blocks everything by default, NACL allows everything by default. Edit SG of EC2 to allow SSH from anywhere and port 8080 from anywhere. Access frontend by using http://<IP-of-EC2>:8080.
+    
